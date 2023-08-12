@@ -1,6 +1,18 @@
 import openai
 import streamlit as st
 
+st.set_page_config(
+    page_title="Dialogbox-AI",
+    page_icon="🧠",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Code': 'https://github.com/kartikeymishra/Dialogbox-AI',
+        'Connect': "https://www.linkedin.com/in/kartikeymish/",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 with st.sidebar:
     st.title('🧠 Dialogbox-AI 🗣️')
     if 'OPENAI_API_KEY' in st.secrets:
@@ -13,18 +25,6 @@ with st.sidebar:
             st.info('You can find your API key at https://beta.openai.com/account/api-keys', icon='🔑')
         else:
             st.success('Proceed to entering your prompt message & interact!', icon='👉')
-
-st.set_page_config(
-    page_title="Dialogbox-AI",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

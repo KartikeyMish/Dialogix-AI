@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(
     page_title="Dialogbox-AI",
     page_icon="🧠",
-    menu_items={
+    menu={
         'Code': 'https://www.github.com/kartikeymish',
         'Connect': "https://www.linkedin.com/in/kartikeymish/",
     }

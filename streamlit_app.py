@@ -3,14 +3,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Dialogbox-AI",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="auto",
-    menu_items={
-        'Code': 'https://github.com/kartikeymishra/Dialogbox-AI',
-        'Connect': "https://www.linkedin.com/in/kartikeymish/"
-        # 'About': "# This is a header. This is an *extremely* cool app!"
-    }
+    page_icon="🧠"
 )
 
 st.title('🧠 Dialogbox-AI 🗣️')

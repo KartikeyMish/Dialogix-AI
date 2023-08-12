@@ -13,12 +13,8 @@ import streamlit as st
 #     # }
 # )
 
-st.set_page_config(
-    page_title="Dialogbox-AI",
-    page_icon="🧠",
-    layout="wide",
-    initial_sidebar_state="auto",
-)
+st.title('🧠 Dialogbox-AI 🗣️')
+
 with st.sidebar:
     st.title('🧠 Dialogbox-AI 🗣️')
     if 'OPENAI_API_KEY' in st.secrets:

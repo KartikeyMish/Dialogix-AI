@@ -7,9 +7,10 @@ with st.sidebar:
         st.success('API key already provided!', icon='✅')
         openai.api_key = st.secrets['OPENAI_API_KEY']
     else:
-        openai.api_key = st.text_input('Enter OpenAI API token:', type='password')
+        openai.api_key = st.text_input('Enter OpenAI API key:', type='password')
         if not (openai.api_key.startswith('sk-') and len(openai.api_key)==51):
             st.warning('Please enter your credentials!', icon='⚠️')
+            st.warning('You can find your API key at https://beta.openai.com/account/api-keys', icon='🔑')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
 

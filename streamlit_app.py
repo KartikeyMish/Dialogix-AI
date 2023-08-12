@@ -12,7 +12,19 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')           
             st.info('You can find your API key at https://beta.openai.com/account/api-keys', icon='🔑')
         else:
-            st.success('Proceed to entering your prompt message!', icon='👉')
+            st.success('Proceed to entering your prompt message & interact!', icon='👉')
+
+st.set_page_config(
+    page_title="Dialogbox-AI",
+    page_icon="🧠",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

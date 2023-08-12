@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 with st.sidebar:
-    st.title('🤖💬 OpenAI Chatbot')
+    st.title('🧠 Dialogbox-AI 🗣️')
     if 'OPENAI_API_KEY' in st.secrets:
         st.success('API key already provided!', icon='✅')
         openai.api_key = st.secrets['OPENAI_API_KEY']
@@ -20,7 +20,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("What is in your mind?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
